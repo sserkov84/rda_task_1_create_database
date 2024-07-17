@@ -17,12 +17,12 @@ create table Customers (
     Address varchar(100),
     primary key (ID)
 );
-create table Orders (
-ID int auto_increment, 
-CustomerID int, 
-Date date,
-primary key (ID),
-foreign key (CustomerID) references Customers(ID) on delete set null
+      create table Orders (
+      ID int auto_increment, 
+      CustomerID int, 
+      Date date,
+      primary key (ID),
+      foreign key (CustomerID) references Customers(ID) on delete set null
 );
 create table OrderItems (
 ID int auto_increment,
