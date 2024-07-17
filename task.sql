@@ -24,11 +24,11 @@ create table Customers (
       primary key (ID),
       foreign key (CustomerID) references Customers(ID) on delete set null
 );
-create table OrderItems (
-ID int auto_increment,
-OrderID int, 
-ProductID int,
-primary key (ID),
-foreign key (OrderID) references Orders(ID) on delete set null,
-foreign key (ProductID) references Products(ID) on delete set null
+      create table OrderItems (
+      ID int auto_increment,
+      OrderID int, 
+      ProductID int,
+      primary key (ID),
+      foreign key (OrderID) references Orders(ID) on delete set null,
+      foreign key (ProductID) references Products(ID) on delete set null
 );
